@@ -1,9 +1,9 @@
+
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {
-      
-    },
+    extend: {},
   },
   daisyui: {
     themes: [
@@ -16,9 +16,7 @@ module.exports = {
           "base-100": "#ffffff",
         },
       },
-      
       "cupcake",
     ],
   },
   plugins: [require("daisyui")],
-}
