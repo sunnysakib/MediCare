@@ -1,5 +1,3 @@
-
-
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -16,7 +14,9 @@ module.exports = {
           "base-100": "#ffffff",
         },
       },
+     
       "cupcake",
     ],
   },
   plugins: [require("daisyui")],
+}
