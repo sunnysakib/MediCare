@@ -16,6 +16,7 @@ function App() {
         <Route path="appointment" element={<Appointment />} />
         <Route path="login" element={<Login />} />
       </Routes>
+
     </div>
   );
 }
