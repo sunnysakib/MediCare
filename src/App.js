@@ -14,6 +14,8 @@ import MyReview from "./Pages/Dashboard/MyReview";
 import MyHistory from "./Pages/Dashboard/MyHistory";
 import MyAppointments from "./Pages/Dashboard/MyAppointments";
 
+import BloodBank from './Pages/BloodBank/BloodBank';
+import AmbulanceService from './Pages/AmbulanceService/AmbulanceService';
 function App() {
   return (
     <div className="max-w-7xl mx-auto px-12">
@@ -43,6 +45,8 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="blood-bank" element={<BloodBank />} />
+        <Route path="ambulance-service" element={<AmbulanceService />} />
       </Routes>
       <ToastContainer />
     </div>
