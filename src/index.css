@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,3 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@import "./Css/Home/Home.css";
+@import "./Css/Home/Banner.css";
+@import "./Css/Shared/Navbar.css";
+@import "./Css/Shared/PrimaryButton.css";

@@ -1,23 +1,3 @@
-// import React from "react";
-// import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-// import auth from "../../firebase.init";
-
-// const Login = () => {
-//     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-//   return (
-//     <div className="flex h-screen justify-center items-center">
-//       <div className="card w-96 bg-base-100 shadow-xl">
-//         <div className="card-body">
-//           <h2 className="text-center text-2x1 font-bold">Login</h2>
-//           <div className="divider">OR</div>
-//             <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue with Google</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;
 
 import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -25,6 +5,8 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import useToken from "../../hooks/useToken"
+import Navbar from '../Shared/Navbar';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -36,16 +18,18 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [token]  = useToken(user || gUser);
+
     let signInError;
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
     useEffect( () =>{
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [user, gUser, from, navigate])
+    }, [token, from, navigate])
 
     if (loading || gLoading) {
         return <Loading></Loading>
@@ -60,6 +44,8 @@ const Login = () => {
     }
 
     return (
+        <>
+        <Navbar/>
         <div className='flex h-screen justify-center items-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
@@ -127,7 +113,7 @@ const Login = () => {
                 </div>
             </div>
         </div >
+</>
     );
 };
-
 export default Login;

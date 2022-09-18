@@ -1,49 +1,100 @@
 import React from 'react';
 import blood_donate from '../../assets/images/blood_donate.png';
 import blood from '../../assets/images/bdr.png';
+import lacation from '../../assets/images/localisation 1.png';
+import lacation1 from '../../assets/images/connect 1.png';
+import lacation2 from '../../assets/images/emergency 1.png';
+import lacation3 from '../../assets/images/savelife 1.png';
 import Contact from '../Home/Contact';
 import Footer from '../Shared/Footer';
+import Navbar from '../Shared/Navbar';
+import './BloodBank.css'
 
 const BloodBank = () => {
     return (
+        // max-w-7xl mx-auto px-12
         <div>
+             
             <div className="">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div>
-                        <h1 className="text-5xl font-bold"> Every blood donor is a lifesaver. Donate Blood to Save Life...</h1>
-
-                        <p className="py-6">It is said that blood is one of the most priceless gifts one can give to another.
-                            Blood is essential for a person to stay alive. Many times due to accidents or any other serious ailments,
-                            a person might require blood. And in those times, people who step up to donate their blood are real-life
-                            superheroes. </p>
-
+                
+                <div className="bloodHeader">
+                <Navbar navbarType="banner"></Navbar>
+                <div className="flex justify-center h-3/4 items-center">
+                    <div className="flex justify-center flex-col items-center">
+                        <p className="text-white text-7xl">Save Life Connect</p>
+                        <p className="text-white text-2xl my-4">Connecting blood donors with recipients</p>
+                        <button className="btn btn-wide bloodBtn">Explore For Blood</button>
                     </div>
-                    <img src={blood_donate} className="max-w-sm rounded-lg" />
                 </div>
-                <div className="hero-content flex-col lg:flex-row-reverse mt-16 mb-16">
+                </div>
+                <div className="flex justify-center flex-col items-center mt-44">
+                    <p className="text-secondary font-semibold text-5xl">Join the Cause</p>
+                    <p className="text-2xl text-accent my-4 w-2/5 text-center" >Join our cause and help us save more lives. Everyone should have the right to get a blood transfusion.</p>
+                </div>
+                
+                <div className="flex justify-center items-center max-w-7xl mx-auto px-12 w-full bloodInfo">
+                    <div className=" w-1/2">
+                        <p className="text-accent font-semibold text-3xl ">Find Donors in your Area</p>
+                        <p className="text-accent text-xm mt-3">Get connected in a matter of minutes at zero cost. Our App ships with a smart system that finds the closest blood donors.
+                        Our automated blood donation system works efficiently whenever someone needs a blood transfusion.</p>
+                    </div>
+                    <div className=" flex justify-center w-1/2">
+                        <img src={lacation} alt="" style={{
+                            height: "410px"
+                        }} />
+                    </div>
+                </div>
+                
+
+                <div className="flex justify-center items-center max-w-7xl mx-auto px-12 w-full bloodInfo">
+                    <div className=" flex justify-center w-1/2">
+                        <img src={lacation1} alt="" style={{
+                            height: "410px"
+                        }} />
+                    </div>
+                    <div className=" w-1/2">
+                        <p className="text-accent font-semibold text-3xl ">Answer to Emergencies</p>
+                        <p className="text-accent text-xm mt-3">As soon as a new blood request is raised, it is routed among our local volunteer blood donors. We know time matters! So we keep you updated with real-time notifications sent directly to you via SMS (text message) or the installed mobile app</p>
+                    </div>
+                </div>
+
+                <div className="flex justify-center items-center max-w-7xl mx-auto px-12 w-full bloodInfo">
+                    <div className=" w-1/2">
+                        <p className="text-accent font-semibold text-3xl ">Made for Everyone</p>
+                        <p className="text-accent text-xm mt-3">All you need to do is send a text message to 8655, "blood need (blood-group) in (your-city)", in any language you want. Our system is smart enough to understand anything you write and helps you find a donor within minutes if not seconds</p>
+                    </div>
+                    <div className=" flex justify-center w-1/2">
+                        <img src={lacation2} alt="" style={{
+                            height: "410px"
+                        }} />
+                    </div>
+                </div>
+
+                <div className="flex justify-center items-center max-w-7xl mx-auto px-12 w-full bloodInfo">
+                    <div className=" flex justify-center w-1/2">
+                        <img src={lacation3} alt="" style={{
+                            height: "410px"
+                        }} />
+                    </div>
+                    <div className=" w-1/2">
+                        <p className="text-accent font-semibold text-3xl ">You are someone's Hero</p>
+                        <p className="text-accent text-xm mt-3">In as little as few minutes, you can become someone's unnamed, unknown, but all-important Hero. Saving a life is a noble work that starts very simply and easily. Donate Blood or donate Money, every form of contribution you make is important, valued and essential in our shared mission to save lives.</p>
+                    </div>
+                </div>
+                
+                <div className="hero-content flex-col lg:flex-row-reverse my-28 mb-16 max-w-7xl mx-auto px-12">
                     <div>
-                        <h1 className="text-4xl font-bold text-sky-400/100 text-center capitalize italic font-medium">"Donate Your Blood to Us, Save More Life Together"</h1>
+                        <h1 className="text-4xl font-bold text-secondary text-center capitalize italic font-medium">"Donate Your Blood to Us, Save More Life Together"</h1>
                         <h3 className=" text-right text-2xl" >-Jhon Doe</h3>
 
                     </div>
 
                 </div>
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={blood} className="max-w-sm rounded-lg" />
-                    <div>
-                        <h1 className="text-5xl font-bold"> The blood is red gold in the time of saving a life...</h1>
-
-                        <p className="py-6">World Blood Donor Day is celebrated on 14 June every year with an aim to spread awareness and seek attention to the importance of blood donation. It also aims to educate
-                         people on the need for safe blood and blood products for the purpose of transfusion.   </p>
-
-                    </div>
-                    
-                </div>
-                <h1 className=" text-3xl font-bold text-sky-400/100 text-center">Blood Donar's List</h1>
-                <div class="bg-cyan flex justify-center items-center mb-20 mt-10">
-                    <table class="w-full overflow-hidden shadow-2xl font-[Poppins] border-2 border-cyan-200 rounded-[12px] ">
+                <h1 className=" text-3xl font-bold text-accent text-center">Blood Donar's List</h1>
+                <div class="bg-cyan flex justify-center items-center mb-20 mt-10 max-w-7xl mx-auto px-12">
+                    <table class="w-full overflow-hidden font-[Poppins] border-2 border-cyan-200 rounded-[12px] ">
                         <thead>
-                            <tr class=" text-center text-white hover:bg-red-600 bg-red-500 cursor-pointer duration-300">
+                            <tr class=" text-center text-white hover:bg-secondary bg-secondary cursor-pointer duration-300">
                                 <th class=" py-3 ">Serial No</th>
                                 <th class=" py-3 ">Donar Name</th>
                                 <th class=" py-3 ">Phone Number</th>
@@ -52,42 +103,42 @@ const BloodBank = () => {
                             </tr>
                         </thead>
                         <tbody class="text-black text-center">
-                            <tr class="hover:bg-red-300 hover:scale-105 bg-red-50 cursor-pointer duration-300">
+                            <tr class=" bg-third cursor-pointer duration-300">
                                 <td class="py-3 px-6">1</td>
                                 <td class="py-3 px-6">Sazzadur Rahman</td>
                                 <td class="py-3 px-6">01734565833</td>
                                 <td class="py-3 px-6">"B+"(Positive)</td>
                                 <td class="py-3 px-6">Rampura, Budda</td>
                             </tr>
-                            <tr class="hover:bg-red-300 bg-red-50 hover:scale-105 cursor-pointer duration-300">
+                            <tr class="bg-third cursor-pointer duration-300">
                                 <td class="py-3 px-6">2</td>
                                 <td class="py-3 px-6">Abdur Rahman</td>
                                 <td class="py-3 px-6">01734365673</td>
                                 <td class="py-3 px-6">"A+"(Positive)</td>
                                 <td class="py-3 px-6">Mirpur, Dhaka</td>
                             </tr>
-                            <tr class="hover:bg-red-300 bg-red-50 hover:scale-105 cursor-pointer duration-300">
+                            <tr class="bg-third cursor-pointer duration-300">
                                 <td class="py-3 px-6">3</td>
                                 <td class="py-3 px-6">Mr. Pranta</td>
                                 <td class="py-3 px-6">01734567381</td>
                                 <td class="py-3 px-6">"A+"(Positive)</td>
                                 <td class="py-3 px-6">Uttara, Dhaka</td>
                             </tr>
-                            <tr class="hover:bg-red-300 bg-red-50 hover:scale-105 cursor-pointer duration-300">
+                            <tr class="bg-thirdcursor-pointer duration-300">
                                 <td class="py-3 px-6">4</td>
                                 <td class="py-3 px-6">Mr. Khabbab</td>
                                 <td class="py-3 px-6">01734567381</td>
                                 <td class="py-3 px-6">"O+"(Positive)</td>
                                 <td class="py-3 px-6"> Puran Dhaka</td>
                             </tr>
-                            <tr class="hover:bg-red-300 bg-red-50 hover:scale-105 cursor-pointer duration-300">
+                            <tr class="bg-third cursor-pointer duration-300">
                                 <td class="py-3 px-6">5</td>
                                 <td class="py-3 px-6">Mr. Sojib</td>
                                 <td class="py-3 px-6">01734567381</td>
                                 <td class="py-3 px-6">"O-"(Negative)</td>
                                 <td class="py-3 px-6">Mirpur, Dhaka</td>
                             </tr>
-                            <tr class="hover:bg-red-300 bg-red-50 hover:scale-105 cursor-pointer duration-300">
+                            <tr class="bg-third cursor-pointer duration-300">
                                 <td class="py-3 px-6">6</td>
                                 <td class="py-3 px-6">Mr. Shuvo</td>
                                 <td class="py-3 px-6">01734567381</td>
@@ -102,7 +153,7 @@ const BloodBank = () => {
             </div>
             <div>
 
-                <div class="w-full mb-20 bg-white rounded-lg border shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-full mb-20 bg-white rounded-lg border shadow-md dark:bg-gray-800 dark:border-gray-700 max-w-7xl mx-auto px-12">
                     <div class="sm:hidden">
                         <label for="tabs" class="sr-only">Select tab</label>
                         <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 sm:text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">

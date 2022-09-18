@@ -1,0 +1,19 @@
+
+.banner{
+    height: 852px;
+    background-image: url(../../assets/images/hero-bg.png);
+    background-size:cover;
+    background-position: right;
+}
+
+.type-animation{
+    color: white;
+    font-weight: 600;
+}
+
+.banner .banner-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 580px;
+}

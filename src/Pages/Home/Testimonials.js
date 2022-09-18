@@ -29,10 +29,10 @@ const Testimonials = () => {
         },
     ];
     return (
-        <section className='my-28'>
+        <section className='my-28 max-w-7xl mx-auto px-12 my-56'>
             <div className='flex justify-between'>
                 <div>
-                    <h4 className="text-xl text-primary font-bold">Testimonials</h4>
+                    <h4 className="text-xl text-secondary font-bold">Testimonials</h4>
                     <h2 className='text-3xl'>What our Patients say</h2>
                 </div>
                 <div>

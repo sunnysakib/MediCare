@@ -8,16 +8,19 @@ import pet from '../../assets/images/pet.png';
 import furniture from '../../assets/images/furniture.png';
 import Contact from '../Home/Contact';
 import Footer from '../Shared/Footer';
+import Navbar from '../Shared/Navbar';
 
 const AmbulanceService = () => {
     return (
-        <div>
-            <div>
+        <>
+        <Navbar></Navbar>
+        <div className="max-w-7xl mx-auto px-12" >
+            <div className="max-w-7xl mx-auto px-12" >
 
-                <div className="hero-content flex-col lg:flex-row-reverse mt-10 mb-10">
+                <div className="hero-content flex-col lg:flex-row-reverse my-24">
                     <img src={ambulancer} className="max-w rounded-lg" />
                     <div>
-                        <h1 className="text-5xl  font-bold text-sky-400/100  ">Call Ambulance </h1>
+                        <h1 className="text-6xl text-secondary ">Meet Ambulance</h1>
                         <p className="py-6">MediCare is a user friendly way to request and call ambulances close to you.</p>
                         <PrimaryButton>Call Ambulance</PrimaryButton>
 
@@ -26,8 +29,8 @@ const AmbulanceService = () => {
             </div>
             <div>
 
-                <div className="hero-content flex-col lg:flex-row-reverse mt-10 mb-10">
-
+                <div className="hero-content flex-col lg:flex-row-reverse my-24">
+                    
                     <div>
                         <h1 className="text-5xl font-bold text-sky-400/100 text-center">Why We Exist? </h1>
                         <p className="py-6 text-justify">Bangladesh's first, online platform for fast and reliable first point medical attention.
@@ -41,7 +44,7 @@ const AmbulanceService = () => {
                 </div>
             </div>
             <div>
-                <div className="hero-content flex-col lg:flex-row-reverse mt-10 mb-10">
+                <div className="hero-content flex-col lg:flex-row-reverse my-24">
 
                     <div>
                         <h1 className=" text-5xl font-bold text-sky-400/100 text-center">Know What to Do...</h1>
@@ -102,7 +105,7 @@ const AmbulanceService = () => {
                     </div>
                 </div>
             </div>
-            <h1 className=" text-3xl font-bold text-sky-400/100 text-center">Ambulance List</h1>
+            <h1 className=" text-3xl font-bold text-sky-400/100 text-center ">Ambulance List</h1>
             
             <div class="bg-cyan flex justify-center items-center mb-20 mt-10">
                 <table class="w-full overflow-hidden shadow-2xl font-[Poppins] border-2 border-cyan-200 rounded-[12px] ">
@@ -166,6 +169,7 @@ const AmbulanceService = () => {
             <Contact></Contact>
             <Footer></Footer>
         </div>
+        </>
     );
 };
 

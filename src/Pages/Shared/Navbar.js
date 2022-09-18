@@ -4,26 +4,30 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
-const Navbar = () => {
+const navbar_type_classes = {
+    banner: 'bannerNavbar',
+}
+
+const Navbar = ({navbarType, ...otherProps}) => {
     const [user] = useAuthState(auth);
 
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
       };
 
     const menuItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/appointment">Appointment</Link></li>
-        <li><Link to="/blood-bank">BloodBank</Link></li>
-        <li><Link to="/ambulance-service">Ambulance Service</Link></li>
-        <li><Link to="/review">Review</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li>{user ? <button className="btn btn-ghost"  onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li><Link className=" btn-outline text-bold" to="/">Home</Link></li>
+        <li><Link className=" btn-outline" to="/appointment">Appointment</Link></li>
+        <li><Link className=" btn-outline" to="/dashboard">Dashboard</Link></li>
+        <li><Link  className=" btn-outline" to="/blood-bank">BloodBank</Link></li>
+        <li><Link className=" btn-outline" to="/ambulance-service">Ambulance Service</Link></li>
+        <li><Link className=" btn-outline" to="/helpline">Helpline</Link></li>
+        <li><Link className=" btn-outline" to="/contact">Contact</Link></li>
+        <li>{user ? <button className="btn btn-outline"  onClick={logout} >Sign Out</button> : <Link  className=" btn-outline" to="/login">Login </Link>}</li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div  className={`navbar max-w-7xl mx-auto px-12 ${navbar_type_classes[navbarType]}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -33,7 +37,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
+                <Link to="/" className="normal-case text-xl">MediCare</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

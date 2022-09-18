@@ -6,13 +6,16 @@ import Info from './Info';
 import MakeAppointment from './MakeAppointment';
 import Services from './Services';
 import Testimonials from './Testimonials';
+import FeaturedService from './FeaturedService';
 
 const Home = () => {
     return (
         <div>
+            
             <Banner></Banner>
             <Info></Info>
             <Services></Services>
+            <FeaturedService></FeaturedService>
             <MakeAppointment></MakeAppointment>
             <Testimonials></Testimonials>
             <Contact></Contact>

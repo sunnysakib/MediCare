@@ -1,34 +1,34 @@
 import React from 'react';
-import fluoride from '../../assets/images/fluoride.png';
-import cavity from '../../assets/images/cavity.png';
-import whitening from '../../assets/images/whitening.png';
+import treatment from '../../assets/images/treatment1.png';
+import diagnosis from '../../assets/images/Diagnosis.png';
+import ambulanceService from '../../assets/images/ambulanceService.png';
 import Service from './Service';
 
 const Services = () => {
     const services = [
         {
             _id: 1,
-            name: 'Fluoride Treatment',
-            description: '',
-            img: fluoride
+            name: 'Best Doctor',
+            description: 'We provide best Doctor for insure your happy health',
+            img: treatment
         },
         {
             _id: 2,
-            name: 'Cavity Filling',
-            description: '',
-            img: cavity
+            name: 'blood',
+            description: 'Search blood donors and contact. Supporters can make meaningful donations instantly from their phone.',
+            img: diagnosis
         },
         {
             _id: 3,
-            name: 'Teeth Whitening',
-            description: '',
-            img: whitening
+            name: 'Ambulance',
+            description: 'Search Ambulace for 24 hours and pick on time.',
+            img: ambulanceService
         },
     ];
     return (
-        <div className='my-28'>
+        <div className=' my-56 max-w-7xl mx-auto px-12'>
             <div className='text-center'>
-                <h3 className='text-primary  text-xl font-bold uppercase'>Our Services</h3>
+                <h3 className='text-secondary  text-xl font-bold uppercase'>Our Services</h3>
                 <h2 className='text-4xl'>Services We Provide</h2>
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>

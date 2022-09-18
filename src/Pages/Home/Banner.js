@@ -1,20 +1,42 @@
-import React from 'react';
-import chair from '../../assets/images/chair.png';
-import PrimaryButton from '../Shared/PrimaryButton';
+import React from "react";
+import { Link } from "react-router-dom";
+import { TypeAnimation } from "react-type-animation";
+import banner from "../../assets/images/hero-bg.png";
+import Navbar from "../Shared/Navbar";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const Banner = () => {
-    return (
-        <div className="hero min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={chair} className="max-w-sm " />
-                <div>
-                    <h1 className="text-5xl font-bold">Healthy Life, Happy Life</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <PrimaryButton>Get Started</PrimaryButton>
-                </div>
-            </div>
+  return (
+    <div className="banner">
+      <Navbar navbarType="banner" />
+      <div className="banner-header max-w-7xl mx-auto px-12">
+        <div >
+          <TypeAnimation
+            sequence={[
+              "WE PROVIDE BEST HEALTHCARE",
+              1000,
+              "WE PROVIDE BEST AMBULANCE",
+              1000,
+              "WE PROVIDE BEST DOCTOR",
+              1000,
+            ]}
+            speed={50} // Custom Speed from 1-99 - Default Speed: 40
+            style={{ fontSize: "3em" }}
+            className='type-animation'
+            wrapper="span" // Animation will be rendered as a <span>
+            repeat={Infinity} // Repeat this Animation Sequence infinitely
+          />
+          <p className="py-6" style={{color: '#F6F7F9', width: '50%',}}>
+          Medicare, a virtual healthcare service that allows users to enjoy all the features of 
+          physical hospitals and medical services simply with the help of internet. you can make Appointment and
+          Payment, get blood from Blood Bank, get  Ambulance Service, There is 24/7 Emergency Service, Video Conference 
+          with Doctor and many more services provided here.
+          </p>
+          <Link to="/appointment"><PrimaryButton headerBtn = 'headerBtn'>Get Appointment</PrimaryButton></Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Banner;

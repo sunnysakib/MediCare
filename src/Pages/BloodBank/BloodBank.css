@@ -1,0 +1,25 @@
+.bloodHeader{
+    height: 690px;
+    background-image: url(../../assets/images/header\ 2.png);
+    background-repeat: no-repeat;
+    background-size: 2560px auto;
+    background-position: top;
+}
+
+.bloodBtn{
+    background: transparent !important;
+    border-color: white;
+    border-width: 2px;
+    color: white;
+}
+
+.bloodBtn:hover{
+    background: white !important;
+    border-color: white;
+    border-width: 2px;
+    color: black;
+}
+
+.bloodInfo{
+    background-image: url(../../assets/images/dots\ \(1\).webp);
+}
