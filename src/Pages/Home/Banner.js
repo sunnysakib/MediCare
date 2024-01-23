@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
-import banner from "../../assets/images/hero-bg.png";
 import Navbar from "../Shared/Navbar";
 import PrimaryButton from "../Shared/PrimaryButton";
 
 const Banner = () => {
   return (
     <div className="banner">
-      <Navbar navbarType="banner" />
-      <div className="banner-header max-w-7xl mx-auto px-12">
+      <Navbar navbarType="banner"/>
+      <div className="banner-header max-w-7xl mx-auto px-4 text-[12px] h-[580px] md:px-12 ">
         <div >
           <TypeAnimation
             sequence={[
@@ -26,7 +25,7 @@ const Banner = () => {
             wrapper="span" // Animation will be rendered as a <span>
             repeat={Infinity} // Repeat this Animation Sequence infinitely
           />
-          <p className="py-6" style={{color: '#F6F7F9', width: '50%',}}>
+          <p className="py-6 text-[#F6F7F9] w-100 text-[18px] text-left  md:w-50">
           Medicare, a virtual healthcare service that allows users to enjoy all the features of 
           physical hospitals and medical services simply with the help of internet. you can make Appointment and
           Payment, get blood from Blood Bank, get  Ambulance Service, There is 24/7 Emergency Service, Video Conference 
