@@ -11,7 +11,6 @@ import FeaturedService from './FeaturedService';
 const Home = () => {
     return (
         <div>
-            
             <Banner></Banner>
             <Info></Info>
             <Services></Services>
