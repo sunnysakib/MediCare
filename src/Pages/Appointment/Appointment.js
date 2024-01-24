@@ -8,7 +8,7 @@ const Appointment = () => {
     const [date, setDate] = useState(new Date());
     return (
         <>
-        <div className=''>
+        <div className='overflow-hidden'>
             <AppointmentBanner date={date} setDate={setDate}></AppointmentBanner>
             <AvailableAppointments date={date}></AvailableAppointments>
             <Footer></Footer>

@@ -10,14 +10,14 @@ const AppointmentBanner = ({date, setDate}) => {
     return (
         <div style={{
             background: `url(${poster})`,
-            height: '806px'
-         }}>
+            width: '100%'
+         }} className="lg:h-[650px] xl:h-[806px]">
             <Navbar></Navbar>
-        <div className="w-full mb-52" >
-            <div className="flex justify-center items-center flex-wrap lg:flex-row-reverse mt-36">
-                <img src={chair} className="" alt='Dentist Chair' />
-                <div>
-                    <DayPicker className="pr-14"
+        <div className="w-full mb-10 px-4 xl:mb-52" >
+            <div className="flex justify-center items-center flex-wrap lg:flex-row-reverse mt-10 lg:mt-28 xl:mt-36">
+                <img className="lg:h-[400px]" src={chair} alt='Dentist Chair' />
+                <div className='mt-8'>
+                    <DayPicker className="md:pr-14"
                         mode="single"
                         selected={date}
                         onSelect={setDate}
