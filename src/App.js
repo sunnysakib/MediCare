@@ -25,7 +25,6 @@ import Helpline from "./Pages/Helpline/Helpline";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 function App() {
   return (
-    // max-w-7xl mx-auto px-12
     <div className=""> 
       <Routes>
         <Route path="/" element={<Home />} />

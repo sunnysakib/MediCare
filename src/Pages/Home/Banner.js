@@ -25,7 +25,7 @@ const Banner = () => {
             wrapper="span" // Animation will be rendered as a <span>
             repeat={Infinity} // Repeat this Animation Sequence infinitely
           />
-          <p className="py-6 text-[#F6F7F9] w-100 text-[18px] text-left  md:w-50">
+          <p className="py-6 text-[#F6F7F9] w-100 text-[18px] text-left lg:w-[50%]  md:w-50">
           Medicare, a virtual healthcare service that allows users to enjoy all the features of 
           physical hospitals and medical services simply with the help of internet. you can make Appointment and
           Payment, get blood from Blood Bank, get  Ambulance Service, There is 24/7 Emergency Service, Video Conference 
